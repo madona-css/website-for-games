@@ -1,0 +1,790 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    padding-top: 80px;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Days One", sans-serif;
+}
+
+.navbar .nav-link.hov {
+    color: white;
+}
+
+.navbar .nav-link.hov:hover {
+    color: yellow;
+}
+
+.navbar span {
+    color: rgb(153, 214, 10);
+    margin-right: 15px;
+
+}
+
+.but3 {
+    background-color: rgb(181, 245, 5);
+}
+
+.but {
+    color: white;
+}
+
+.but:hover {
+    color: yellow;
+}
+
+.HOME {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.9)), url("./imagesss/Copy\ of\ hero-bg.jpg");
+    background-attachment: scroll, fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 70px;
+
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 20px;
+}
+
+.red {
+    color: red;
+}
+
+#Home {
+    padding-top: 70px;
+}
+
+.navbar-toggler {
+    background-color: #f0f1ee;
+}
+
+@media(max-width:575px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .but2 {
+        margin-block: 15px;
+    }
+
+    .but22 {
+        margin-block: 15px;
+    }
+
+}
+
+@media(max-width:991px) {
+
+    .but2,
+    .but22 {
+        margin-bottom: 15px;
+    }
+
+}
+
+.pic {
+    border: 7px solid;
+    border-image: linear-gradient(to right, rgb(203 254 28), green)3;
+}
+
+.pic img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.but2 {
+    font-size: 20px;
+    background-color: rgb(203 254 28);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(203 254 28);
+    ;
+}
+
+.but22 {
+    font-size: 20px;
+    background-color: rgba(20, 26, 4, 0.04);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(203 254 28);
+    color: rgb(203 254 28);
+
+}
+
+.btn-shine {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.navbar li {
+    padding-bottom: 0;
+}
+
+.but22:hover {
+    color: black;
+    background-color: rgb(203 254 28);
+}
+
+.btn-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    transition: 0.3s;
+    background-color: white;
+    opacity: 0.5;
+    transform: skewX(-20deg);
+    z-index: 1;
+}
+
+.btn-shine:hover::before {
+    animation: shine 0.7s;
+}
+
+@keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+.rate {
+    border: 2px solid;
+    border-image: linear-gradient(to right, rgb(203 254 28), green)1;
+    width: fit-content;
+    position: relative;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    padding: 20px;
+}
+
+.rate i {
+    font-size: 20px;
+    padding-right: 10px;
+    color: rgb(203 254 28);
+}
+
+.rate h3 {
+    font-size: 15px;
+    color: gray;
+}
+
+.rate span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.head {
+    padding-top: 30px;
+    position: relative;
+}
+
+.head p {
+    color: #9acd32;
+    font-size: 55px;
+}
+
+
+.head h2 {
+    font-size: 20px;
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+
+.carousel-item .d-flex {
+    margin: auto;
+    gap: 10px;
+    border-radius: 10px;
+    width: 90%;
+    justify-content: center;
+}
+
+.carousel-item img {
+    width: 25%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.view {
+    padding: 15px;
+    border: 2px solid yellowgreen;
+    background-color: #111;
+    color: yellowgreen;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.view:hover {
+    background-color: yellowgreen;
+    color: #111;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(180, 220, 0, 0.4), rgba(180, 255, 0, 0));
+    border: 2px solid yellowgreen;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+
+.overlay h4 {
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    left: 10px;
+    font-size: 15px;
+    color: black;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.overlay span {
+    color: black;
+    font-size: 15px;
+    background-color: rgba(20, 15, 15, 0.6);
+    border-radius: 15px;
+    padding: 5px 8px;
+    color: white;
+    font-weight: 400;
+}
+
+#OUR-GAMES .overlay i {
+    color: rgb(106, 230, 6);
+    font-weight: 800;
+    background-color: none;
+}
+
+.dataa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.head2 p {
+    color: white;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    padding-bottom: 0;
+    position: relative;
+}
+@media(max-width:565px){
+#What-We-Do p{font-size:25px;}
+
+
+}
+
+h2::before,
+h2::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: yellowgreen;
+}
+
+h2::before {
+    right: 55%;
+    margin-right: 15px;
+}
+
+h2::after {
+    left: 55%;
+    margin-left: 15px;
+}
+
+@media(max-width:575px) {
+    h2::before {
+
+        margin-right: 50px;
+    }
+
+    h2::after {
+
+        margin-left: 50px;
+    }
+}
+
+
+.head2 {
+    padding-top: 60px;
+}
+
+.head2 span {
+    color: yellowgreen;
+}
+
+#What-We-Do .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    gap: 15px;
+    background-color: rgb(26 26 26);
+    border: 2px solid rgb(75, 74, 74);
+    border-radius: 15px;
+position: relative;
+    transition: 0.1s ease;
+    overflow:hidden ;
+
+}
+
+#What-We-Do .cards::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-width: 0 0 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+    transition: 0.3s ease;
+
+}
+
+#What-We-Do .cards::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+
+    transition: 0.3s ease;
+}
+
+
+#What-We-Do .cards:hover::before {
+    border-color: transparent transparent #9ae407 transparent;
+    top: 10px;
+    left: 10px;
+}
+
+#What-We-Do .cards:hover::after {
+    border-color: #93da07 transparent transparent transparent;
+    bottom: 10px;
+    right: 10px;
+}
+
+#What-We-Do .cards:hover {
+    border: 2px solid yellowgreen;
+}
+
+#What-We-Do .cards:hover i {
+    background-color: yellowgreen;
+    color: black;
+
+}
+
+.allcards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 90px;
+    margin-top: 30px;
+}
+
+#What-We-Do .cards i {
+    font-size: 35px;
+    color: #9acd32;
+    margin-top: 60px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(30 41 57);
+    transition: 0.1s ease;
+    transition-delay: 0s;
+
+}
+
+#What-We-Do .cards h5,
+h6 {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+#What-We-Do .cards h5 {
+    text-align: center;
+}
+
+#What-We-Do .cards h6 {
+    margin-bottom: 60px;
+}
+
+
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(-50%)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+.logos {
+    width: 100%;
+    position: relative;
+}
+
+
+.firstLoop {
+    width: max-content;
+    animation: scroll 10s linear infinite;
+    padding-block: 20px;
+    gap: 15px;
+}
+
+.secondLoop {
+    width: max-content;
+    animation: scroll2 10s linear infinite;
+    gap: 15px;
+    padding-block: 20px;
+}
+
+.logos img {
+    border-radius: 10px;
+    width: 100px;
+}
+
+hr {
+    width: 50%;
+    height: 4px;
+    margin: auto;
+
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-block: 40px;
+}
+
+small {
+    color: rgb(163, 161, 161);
+}
+
+.profile .card:hover small {
+    color: rgb(230, 227, 227);
+}
+
+.profile .card {
+    padding: 0;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.profile .card:hover {
+    filter: grayscale(0);
+}
+
+.profile .card:hover span {
+    color: rgb(172, 235, 48);
+}
+
+.profile .card:hover .greenpara {
+    color: yellowgreen;
+}
+
+.profile img {
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.head2 .tiny {
+    color: gray;
+    font-weight: 100;
+}
+
+.badge {
+    position: absolute;
+    width: fit-content;
+    font-size: 20px;
+    top: 80px;
+    right: -30px;
+    transform: rotate(90deg);
+    z-index: 100;
+}
+
+.profile p {
+    margin-bottom: 0;
+}
+
+
+
+#Contact-Us .row .way i {
+    background-color: rgb(156, 221, 3);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.row .card h5 {
+    color: rgb(20, 20, 19);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.row .card p {
+    color: grey;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.row .final {
+    background: linear-gradient(to right, greenyellow 40%, rgb(4, 224, 103))
+}
+
+
+.final .social i {
+    background-color: rgb(8, 8, 8);
+    padding: 10px;
+    color: greenyellow;
+    margin-right: 20px;
+    font-size: 15px;
+    border-radius: 10px;
+
+}
+
+.social i:hover {
+    cursor: pointer;
+    background-color: #e8f0dd9f;
+    color: black;
+
+}
+
+.contact {
+    margin-top: x;
+    border-radius: 15px;
+    background-color: rgb(30 41 57);
+    padding: 15px;
+}
+
+textarea {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 200;
+    border-radius: 10px;
+}
+
+.email {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 200;
+    border-radius: 10px;
+}
+
+.sub {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 200;
+    border-radius: 10px;
+    background: linear-gradient(to right, greenyellow 40%, rgb(4, 224, 103));
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.form-control {
+    font-size: 20px;
+}
+
+
+
+
+
+
+.header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-block: 15px;
+}
+
+.logo p {
+    font-size: 18px;
+    color: #7e7c7c;
+}
+
+.header i {
+
+
+    padding: 10px;
+    color: yellowgreen;
+}
+
+.categ2 {
+
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+.categ2 h6 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align:center;
+}
+
+footer li:hover {
+    color: yellow;
+}
+
+
+hr {
+    width: 80%;
+    margin-block: 30px;
+    height: 3px;
+    background-color: white;
+    box-shadow: 3px 3px 9px white;
+}
+
+.end {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 200;
+}
+#Our-Team{padding-top: 70px;}
+#What-We-Do{padding-top: 70px;}
+.end p {
+    color: white;
+}
+
+.policy {
+    color: white;
+    cursor: pointer;
+}
+
+.policy span {
+    margin-left: 15px;
+}
+
+.policy span:hover {
+    color: yellow;
+}
+
+.header span {
+    color: yellowgreen;
+}
+@media(max-width:576px){
+.logos img{width:50px;}}
