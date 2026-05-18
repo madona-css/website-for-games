@@ -519,6 +519,7 @@ h6 {
 .logos {
     width: 100%;
     position: relative;
+
 }
 
 
@@ -787,4 +788,6 @@ hr {
     color: yellowgreen;
 }
 @media(max-width:576px){
-.logos img{width:50px;}}
+.logos img{width:50px;}
+.logos {overflow-x: hidden;}
+}
