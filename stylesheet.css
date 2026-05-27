@@ -722,11 +722,6 @@ select {
     font-size: 20px;
 }
 
-
-
-
-
-
 .header {
     font-size: 25px;
     font-weight: 600;
@@ -820,10 +815,7 @@ hr {
 
 @media(max-width:576px) {
     .logos img {
-        width: 50px;
+        width: 40px;
     }
 
-    .logos {
-        overflow-x: hidden;
-    }
 }
